@@ -9,12 +9,16 @@ requires-python = ">=3.12"
 readme = "README.md"
 
 dependencies = [
+    "es-core-news-sm",
     "fastparquet>=2024.11.0",
     "jupyter>=1.1.1",
+    "matplotlib>=3.10.7",
     "nltk>=3.9.2",
     "numpy>=2.3.4",
     "pandas>=2.3.3",
     "scikit-learn>=1.7.2",
+    "spacy>=3.8.7",
+    "wordcloud>=1.9.4",
 ]
 
 [project.urls]
@@ -39,6 +43,9 @@ default-groups = [
     "dev",
 #
 ]
+
+[tool.uv.sources]
+es-core-news-sm = { url = "https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.8.0/es_core_news_sm-3.8.0-py3-none-any.whl" }
 
 [build-system]
 requires = ["hatchling"]
